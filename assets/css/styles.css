@@ -1,0 +1,122 @@
+@import url("@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: crimson;
+    flex-direction: column;
+}
+
+h1{
+    color: #fff;
+    margin-bottom: 2em;
+    font-size: 2.2rem;
+}
+
+section{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid #000;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px solid crimson;
+}
+
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+    object-fit: cover;
+}
+
+.animation{
+    animation:  avatarJump 500ms infinite;
+}
+
+/* Animation  personnage sauter */
+
+@keyframes avatarJump {
+
+    0%{
+        top: 130px;
+    }
+    25%{
+        top: 80px;
+    }
+    50%{
+        top: 80px;
+    }
+    100%{
+        top: 130px;
+    }    
+}
+
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.obstacle{
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    border-radius: 50%;
+    animation: obstacleAnim 2.5s infinite;
+}
+
+
+/* Animation obstacle */
+
+@keyframes obstacleAnim {
+
+    0%{
+        left: 480px;
+    }
+    100%{
+        left: -40px;
+    }    
+}
+
+
+.control{
+    margin-top:20px;
+    text-align: center;
+}
+
+a, button{
+    padding: 10px 50px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 15px;
+    text-decoration: 0;
+    color: #000;
+}
+
+
+
